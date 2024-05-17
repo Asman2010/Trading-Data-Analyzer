@@ -1,9 +1,9 @@
 # Trading-Data-Analyzer
-Trading Data Analyzer is a Python-based application designed to help users analyze their trading data from CSV files. The application reads a CSV file containing trading transactions, calculates profit and loss, and displays detailed analyses. Additionally, it allows users to save the analysis as a PDF file. This Analyzer is 
+Trading Data Analyzer is a Python-based application designed to help users analyze their trading data from CSV files. The application reads a CSV file containing trading transactions, calculates profit and loss, and displays detailed analyses. Additionally, it allows users to save the analysis as a PDF file. 
 
 **Note: The CSV file format provided in this application is specifically tailored for Zerodha, a popular Indian stock broker. If you are using a different broker, you may need to modify the code to match the column names and data structure of the CSV file provided by your broker.**
 
-## Features
+## 1. Features
 
 1. **CSV File Selection**: Users can select a CSV file to analyze. The CSV must contain the following columns:
    - `symbol`
@@ -25,7 +25,16 @@ Trading Data Analyzer is a Python-based application designed to help users analy
 
 5. **Clear Screen**: Users can clear the analysis results from the text widget.
 
-## Dependencies
+
+## 2. Customizable Themes : User can choose from a variety of dark and light, themes include:
+![image](https://github.com/Asman2010/Trading-Data-Analyzer/assets/142419243/a13f2262-eae8-4a10-91f9-70614a9fd7bc)
+
+## 3. Screenshot's
+![image](https://github.com/Asman2010/Trading-Data-Analyzer/assets/142419243/6fe4c27a-89ba-49d6-bebf-d19f9f6fe32a)
+-----
+![image](https://github.com/Asman2010/Trading-Data-Analyzer/assets/142419243/92e75596-39f5-4292-8439-a06969e867c9)
+
+## 4. Dependencies
 
 The following Python packages are required:
 - pandas
@@ -39,7 +48,6 @@ You can install these dependencies using the following command:
 pip install pandas prettytable ttkbootstrap fpdf
 ```
 
-## License
+## 5. License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
+This project is licensed under the MIT License.

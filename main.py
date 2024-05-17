@@ -180,14 +180,32 @@ def save_as_pdf():
     pdf.add_page()
     pdf.set_font("Arial", size=12)
 
-    col_widths = [40, 150]  # Adjust column widths as needed
+    col_widths = [50, 50, 60, 30, 50, 50, 60, 30, 40, 40]  # Adjust column widths as needed
+
+    def add_table_headers(headers):
+        pdf.set_font("Arial", 'B', 12)
+        for idx, header in enumerate(headers):
+            pdf.cell(col_widths[idx], 10, header, border=1)
+        pdf.ln(10)
+        pdf.set_font("Arial", size=12)
+
     for table in tables:
-        table_data = table._rows
-        for row in table_data:
+        # Extract headers and rows from the PrettyTable object
+        headers = table.field_names
+        rows = table._rows
+
+        # Write headers to the PDF
+        add_table_headers(headers)
+
+        # Write each row to the PDF
+        for row in rows:
+            if pdf.get_y() > 270:  # Adjust the value as needed to fit your page size
+                pdf.add_page()
+                add_table_headers(headers)
             for idx, data in enumerate(row):
                 pdf.cell(col_widths[idx], 10, str(data), border=1)
             pdf.ln(10)
-        pdf.ln(10)
+        pdf.ln(10)  # Add extra space between tables
 
     try:
         pdf.output(file_path)

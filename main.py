@@ -210,7 +210,7 @@ def show_about():
 
 # Create main window
 root = ttk.Window(themename="united")
-root.iconbitmap("D:\Trading\P&L Checkerlogo.ico")
+root.iconbitmap("logo.ico")
 root.title("Trading Data Analyzer 📈")
 root.geometry(f"{root.winfo_screenwidth()}x{root.winfo_screenheight()}")
 
